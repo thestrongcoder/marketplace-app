@@ -40,4 +40,8 @@ class OrderController < ApplicationController
         render plain: "Success"
     end
 
+    def my_order
+      @my_order = Order.where(user_id: current_user.id)
+    end
+
 end

@@ -29,6 +29,10 @@ Rails.application.routes.draw do
 
   # webhook order
   post "/orders/webhook", to: "order#webhook"
+
+  # view my orders
+  get "/orders/myorder", to: "order#my_order", as: "my_order"
+  get "/users/:id/orders", to: "user#orders", as: "users_orders"
   
   # delete product from list 
   delete "product/:id", to: "product#destroy"

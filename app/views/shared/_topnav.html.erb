@@ -9,6 +9,8 @@
         |
           <%= link_to 'Product List', products_path, class: "btn btn-light"%>
           |
+          <%= link_to 'My Orders', my_order_path, class: "btn btn-light"%>
+          |
           <%= link_to 'Logout', destroy_user_session_path, method: 'delete',  class:"btn btn-light"%>
           |
           <%= current_user.email %>

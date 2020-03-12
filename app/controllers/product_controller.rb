@@ -39,7 +39,7 @@ class ProductController < ApplicationController
       def destroy
         @product.destroy
         respond_to do |format|
-          format.html { redirect_to dogs_url, notice: 'This product was successfully removed' }
+          format.html { redirect_to product_url, notice: 'This product was successfully removed' }
           format.json { head :no_content }
         end
       end
