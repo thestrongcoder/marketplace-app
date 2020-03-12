@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# bootstrap framework
+gem 'bootstrap', '~> 4.4.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -62,3 +64,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "aws-sdk-s3", "~> 1.60"
+
+gem "devise", "~> 4.7"
+
+gem "stripe", "~> 5.17"
+
+gem "ultrahook", "~> 0.1.5"

@@ -1,0 +1,26 @@
+<h2>Product Listing</h2>
+  <div class="box">
+  <div class="card-deck">
+    <% @product.each do |product| %>
+      <% if !product.order %>
+          <div class="card" style="min-width:250px; max-width:500px;">
+          <%= image_tag product.picture, class:"card-img-top", width: 120  if product.picture.attached? %>
+          <div class="card-body">
+          <h5 class="card-title"><%= link_to "#{product.name.capitalize}", product_path(product) %></h5>
+          <p class="card-text">
+            <p>Brand: <%= product.brand.brand %></p>
+            <p>Category: <%= product.category.category %></p>
+            <p>Condition: <%= product.condition %></p>
+            <p>Price: <%= number_to_currency product.price %></p>
+        </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Click for more details</small>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+
+
+

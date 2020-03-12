@@ -1,0 +1,9 @@
+   <div id="mySidenav" class="sidenav">
+  <span class="opennav" onclick="openNav()"></span>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <% if user_signed_in? %>
+        <p class="btn"><%= link_to 'Product List', mylist_path %></p>
+    <% end %>
+    <p class="btn"><%= link_to 'Home', welcome_path %></p>
+    <p class="btn"><%= link_to 'View All Products', products_path %></p>
+</div>

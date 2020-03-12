@@ -1,0 +1,55 @@
+<div class="row">
+<%= form_with(model: product, local: true) do |form| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+        <% product.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.select :category, options_for_select(Category.all.map {|category| [category.category, category .id]}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand %>
+    
+    <%= form.select :brand, options_for_select(Brand.all.map {|brand| [brand.brand, brand.id] }) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :condition %>
+    <%= form.select :condition, ["new", "used"] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description%>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.file_field :picture, accept:'image/png,image/gif,image/jpeg,image/jpg' %>
+  </div>
+
+  <div class="field">
+       <%= form.label :price %>
+       <%= form.number_field :price, step: '0.01' %>
+   </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1> <%= @product.name %> </h1>
+</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    <%= image_tag @product.picture, class:'rounded float-left', width: 550 if @product.picture.attached? %>
+    </div>
+  <div class="col">
+  <p>
+    <strong>Brand:</strong>
+    <%= @product.brand.brand %>
+  </p>
+
+  <p>
+    <strong>Category:</strong>
+    <%= @product.category.category %>
+  </p>
+
+  <p>
+    <strong>Condition:</strong>
+    <%= @product.condition %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
+  <p>
+    <strong>Price: </strong>
+  <% if @product.price %>
+  <%= number_to_currency @product.price %> 
+      <% if user_signed_in? %>
+  </p>
+  <p>
+        <% if @product.user_id != current_user.id %>
+        <%= link_to "Buy now", new_order_path(product_id: @product.id), class:"btn btn-dark" %>
+      <% end %>
+      <% else %>
+        <%= link_to "Sign in to buy product", new_user_registration_path, class:"btn btn-dark" %>
+      <% end %>
+  </p>
+  <% end %>
+    <%= link_to 'Back', product_path, class:"btn btn-dark" %>
+  
+  </div>
+  </div>
