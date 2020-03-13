@@ -100,7 +100,7 @@ The target audience are powerlifters of all skill levels, from novice to elite a
 
 ### <b><u> Third-party Services</u></b>
 
-Stripe API was used as a third party service to provide a payment to purchases made through the application.
+Stripe API was used as a third party service to provide a payment to purchases made through the application. When it comes to running an internet business, Stripe are considered the go-to for business owners, allowing all parties involved to worry less about the payments, and more about the actual business. For an online business, and in particular, a double sided marketplace, it is important to have fast money-handling processes to keep processes moving quickly. Stripe integration allows the buyer to input their credit card details and quickly verifies the card and payer details. 
 ![Stripe API](/app/assets/images/stripeapi.png)
 
 
