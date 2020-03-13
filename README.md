@@ -39,9 +39,12 @@ There will also be links to the GPC powerlifting website which lists all officia
 
 ### <b><u> Functionality / Features </u></b>
 
-The main features of this application is to provide a double sided marketplace, allowing users to buy and sell powerlifting specific gear. The user will be able to view, and place an order/purchase an item using stripe payment gateway, and then review the order, linking the user purchasing the item, and the item being purchased. Using the devise gem, users are able to sign up or log in. 
+The main features of this application is to provide a double sided marketplace, allowing users to buy and sell powerlifting specific gear. The user will be able to view, and place an order/purchase an item using stripe payment gateway, and then review the order, linking the user purchasing the item, and the item being purchased. Using the devise gem, users are able to sign up or log in before they can purchase any items. 
 
-Some added features, allow users to view links to the manufacturers websites so they can view more information. As well as links to media for information about the sport and competitions. 
+Some added features which are part of the ERD however were not implemented in time will allow users to view links to the manufacturers websites so they can view more information. As well as a search functions and being able to filter products by category and brand which is the reason the ERD has been set up the way it was. 
+
+
+Some added content which provides people insight to the world of powerlifting, is in the 'about' page, where there are links to the GPC Australia page, a live streaming service where users can view previous or current competitions, as well as tickets to the EPIC Training Camp, providing information on more than just simply lifting weights, and a page showcasing "The Platform Podcast", with an embedded spotify playlist, and links to social media. 
 
 ### <b><u> Sitemap </u></b>
 
@@ -95,16 +98,6 @@ The target audience are powerlifters of all skill levels, from novice to elite a
 ![ERD](/app/assets/images/ERD.png)
 
 
-
-### <b><u> High-Level Components of Application</u></b>
-Explain the different high-level components (abstractions) in your app
-
-
-
-
-
-
-
 ### <b><u> Third-party Services</u></b>
 
 Stripe API was used as a third party service to provide a payment to purchases made through the application.
@@ -122,9 +115,9 @@ This project required a number of relationships in order to accurately build wha
 
 
 ### <b><u> Tracking Tasks </u></b>
-Describe the way tasks are allocated and tracked in your project
 
-All tasks were tracked through a trello board. 
+All tasks were tracked through a trello board and finalised at the completion of the task. All tasks were completed using the Agile methodology, with the initial aim to have an MVP completed prior to working on any desired or ideal features. The first point of call was to set up devise, and then work on creating the brand and category tables prior to the product table which has foreign keys.
+https://trello.com/b/dTMB3jAM 
 
 ![Trello Board](/app/assets/images/trello1.png)
 ![Trello Board](/app/assets/images/trello2.png)
