@@ -5,6 +5,9 @@
         <p class="nav-item ">
         <%= link_to 'Home', root_path, class: "btn btn-light"%>
         |
+        <%= link_to 'About', about_path, class: "btn btn-light"%>
+        
+        |
         <%= link_to 'My List', mylist_path, class: "btn btn-light"%>
         |
           <%= link_to 'Product List', products_path, class: "btn btn-light"%>
@@ -19,6 +22,8 @@
     <% else %>
         <p class="nav-item">
         <%= link_to 'Home', root_path, class: "btn btn-light"%>
+        |
+        <%= link_to 'About', about_path, class: "btn btn-light"%>
         |
         <%= link_to 'Product List', products_path, class: "btn btn-light"%>
         |

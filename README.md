@@ -43,10 +43,13 @@ Ruby on Rails
 Postgresql
 PGAdmin
 Javascript
+Github
+Heroku
 
 
 
 User stories for your app
+
 
 
 
@@ -61,7 +64,10 @@ An ERD for your app
 !ERD
 
 
+
+
 Explain the different high-level components (abstractions) in your app
+
 
 
 
@@ -100,7 +106,7 @@ Provide your database schema design
 
 Describe the way tasks are allocated and tracked in your project
 
-
+All tasks were tracked through a trello board. 
 
 
 

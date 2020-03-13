@@ -6,6 +6,10 @@ Rails.application.routes.draw do
 
   get "/", to: "pages#welcome", as: "root"
 
+  get "/podcast", to: "pages#podcast", as: "podcast"
+
+  get "/about", to: "pages#about", as: "about"
+
 
   # create new product
   get "/product/new", to: "product#new", as: "new_product"

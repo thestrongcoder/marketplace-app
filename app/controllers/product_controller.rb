@@ -32,14 +32,15 @@ class ProductController < ApplicationController
       end
 
       def edit
+        @product = Product.find(params[:id])
       end
 
       
 
       def destroy
-        @product.destroy
+        Product.destroy(params[:id])
         respond_to do |format|
-          format.html { redirect_to product_url, notice: 'This product was successfully removed' }
+          format.html { redirect_to product_path, notice: 'This product was successfully removed' }
           format.json { head :no_content }
         end
       end

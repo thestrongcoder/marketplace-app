@@ -1,0 +1,37 @@
+.podcast-full {
+    min-height: 80vh;
+    background-image: url(image_path('bbad_epic.jpg'));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+.hero-text {
+    text-align: center;
+    position: sticky;
+    justify-content: center;
+    top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    color:#0e0d11;
+    font-size: 35px;
+  //   font-family: 'Julius Sans One', sans-serif;
+  }
+  
+  // .white-box {
+  //   background-color: white;
+  //   opacity: 70%;
+  // }
+  
+  // .white-button {
+  //   backgound-color: white;
+  //   opacity: 70%;
+  // }
+
+  .social-media {
+    display:flex;
+    justify-content: space-around;
+  
+  }
