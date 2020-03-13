@@ -1,18 +1,21 @@
 class ProductController < ApplicationController
     before_action :authenticate_user!
-
+    # view all products
     def index
         @product = Product.all
     end
 
+    # show individual product
     def show
         @product = Product.find(params[:id])
     end
 
+    # new product
     def new
         @product = Product.new
     end
 
+    # create product
     def create
         @product = Product.new(product_params)
         @product.user_id = current_user.id
@@ -31,10 +34,12 @@ class ProductController < ApplicationController
         end
       end
 
+      # edit product
       def edit
         @product = Product.find(params[:id])
       end
 
+      # update product
       def update
         @product = Product.find(params[:id])
         @product.user_id = current_user.id
@@ -55,7 +60,7 @@ class ProductController < ApplicationController
       end
 
       
-
+      # destroy product 
       def destroy
         Product.destroy(params[:id])
         respond_to do |format|

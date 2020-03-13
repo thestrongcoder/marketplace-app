@@ -1,14 +1,14 @@
 class PagesController < ApplicationController
 
+    # home/welcome page
     def welcome
     end
 
+    # about page
     def about
     end
 
-    def comp
-    end
-
+    # podcast page
     def podcast
     end
 

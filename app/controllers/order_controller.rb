@@ -1,6 +1,7 @@
 class OrderController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:webhook]
-    def new
+  # purchase item - stripe 
+  def new
         @product = Product.find(params[:product_id])
         @session = Stripe::Checkout::Session.create(
         payment_method_types: ['card'],
@@ -21,10 +22,12 @@ class OrderController < ApplicationController
         )
       end
     
+      # complete order 
       def complete
       
       end
 
+      # webhook - stripe 
     def webhook
         payment_id = params[:data][:object][:payment_intent]
         payment = Stripe::PaymentIntent.retrieve(payment_id)
@@ -40,6 +43,7 @@ class OrderController < ApplicationController
         render plain: "Success"
     end
 
+    # my order 
     def my_order
       @my_order = Order.where(user_id: current_user.id)
     end

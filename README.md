@@ -11,7 +11,8 @@ Novice powerlifters aren’t guaranteed that they will have a good coach, or the
 ### <b><u> Market Research </u></b>
 
 The Brisbane powerlifting community were surveyed during the planning stages of the project to provide an understanding if the application would provide a real-world solution for the community. Results showed that more than 80% of powerlifters have sold or given away powerlifting gear to another lifter, and 78% would purchase used gear from another lifter. When asked how they got gear as a novice, all those surveyed received gear through a combination - from purchasing/borrowing gear from a friend and/or purchasing gear brand new from the Australian distributor online. 
-In March 2020, a Facebook group "Powerlifting gear; buy, sell & giveaway (Australia)" was created by a Brisbane Powerlifter and within a few days, has more than 250 members and the community has already started posting looking for specific equipment, and selling/giving away equipment. The initial idea for this application came from the administrator of the facebook page, a powerlifter who has not only received second hand equipment but continues to help out novice lifters by gifting equipment and teaching them the correct use of the equipment. 
+<br></br>
+In March 2020, a Facebook group "Powerlifting gear; buy, sell & giveaway (Australia)" was created by a Brisbane Powerlifter and within a few days, has more than 250 members and the community has already started posting to the group, looking for specific equipment, and selling/giving away equipment. The initial idea for this application came from the administrator of the facebook page, a powerlifter who has not only received second hand equipment but continues to help out novice lifters by gifting equipment and teaching them the correct use of the equipment. This shouldn't be limited to those who know her, any powerlifter should be able to enter the sport and know they are getting the correct information to succeed in the sport. 
 
 ![Facebook Group](/app/assets/images/fbgroup.png)
 
@@ -77,18 +78,16 @@ The target audience are powerlifters of all skill levels, from novice to elite a
 
 ### <b><u> User Stories </u></b>
 
-
-
-
-
+![User stories](/app/assets/images/userstories.jpg)
 
 
 ### <b><u> Wireframes </u></b>
 
-
-
-
-
+![Home page](/app/assets/images/home.png)
+![Sign-up page](/app/assets/images/signup-login.png)
+![Product List](/app/assets/images/productlist.png)
+![Product page](/app/assets/images/productpage.png)
+![Add/edit item](/app/assets/images/newitem.png)
 
 
 ### <b><u> ERD </u></b>
@@ -104,45 +103,31 @@ Explain the different high-level components (abstractions) in your app
 
 
 
+
+
 ### <b><u> Third-party Services</u></b>
 
-Detail any third party services that your app will use:
-
-The third party service used will be Stripe as a payment gateway
-
+Stripe API was used as a third party service to provide a payment to purchases made through the application.
+![Stripe API](/app/assets/images/stripeapi.png)
 
 
+### <b><u> Model and Database Relations - Active Record Associations </u></b>
+
+This project required a number of relationships in order to accurately build what was needed for now and future purposes. Firstly, the product model has a 'has one' relationship with order and picture. It belonged to user, brand, and category models so that the product information was picking up the correct information. The list of products belonged to the product and user models. The order model belonged to the user and product model, so that the information from the order could be viewed on either sides. 
 
 
+### <b><u> Database Schema Design </u></b>
 
-Describe your projects models in terms of the relationships (active record associations) they have with each other
-
-
-
+![Schema](/app/assets/images/thestrongerd.png)
 
 
-
-Discuss the database relations to be implemented in your application
-
-
-
-
-
-
-
-
-Provide your database schema design
-
-
-
-
-
-
-
+### <b><u> Tracking Tasks </u></b>
 Describe the way tasks are allocated and tracked in your project
 
 All tasks were tracked through a trello board. 
 
-
+![Trello Board](/app/assets/images/trello1.png)
+![Trello Board](/app/assets/images/trello2.png)
+![Trello User Stories](/app/assets/images/trello-userstories.png)
 
 
