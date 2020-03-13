@@ -1,6 +1,29 @@
 // Place all the styles related to the Product controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.product-full {
+    min-height: 100vh;
+    background-image: url(image_path('plgear_cover.jpg'));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+.hero-text {
+    text-align: center;
+    position: sticky;
+    justify-content: center;
+    top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    color:#0e0d11;
+    font-size: 35px;
+  //   font-family: 'Julius Sans One', sans-serif;
+  }
+
 .box{
     display:flex;
     flex:wrap;

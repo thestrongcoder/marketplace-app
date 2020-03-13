@@ -35,12 +35,31 @@ class ProductController < ApplicationController
         @product = Product.find(params[:id])
       end
 
+      def update
+        @product = Product.find(params[:id])
+        @product.user_id = current_user.id
+        @product.brand_id = params[:product][:brand]
+        @product.category_id = params[:product][:category]
+         if params[:product][:picture] 
+          @product.picture.attach(params[:product][:picture])
+         end
+        respond_to do |format|
+          if @product.update(product_params)
+            format.html { redirect_to @product, notice: 'The product was successfully updated.' }
+            format.json { render :show, status: :ok, location: @product }
+          else
+            format.html { render :edit }
+            format.json { render json: @product.errors, status: :unprocessable_entity }
+          end
+        end
+      end
+
       
 
       def destroy
         Product.destroy(params[:id])
         respond_to do |format|
-          format.html { redirect_to product_path, notice: 'This product was successfully removed' }
+          format.html { redirect_to products_path, notice: 'This product was successfully removed' }
           format.json { head :no_content }
         end
       end
